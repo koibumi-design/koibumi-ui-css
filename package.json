@@ -1,6 +1,6 @@
 {
   "name": "@koibumi-design/koibumi-ui-css",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Koibumi Design System CSS Library",
   "main": "dist/main.min.css",
   "scripts": {
@@ -11,6 +11,10 @@
   ],
   "author": "Nikaidou Haruki <meteo.haru@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koibumi-design/koibumi-ui-css.git"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
