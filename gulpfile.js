@@ -7,7 +7,6 @@ const concat = require('gulp-concat');
 
 
 function compileAndConcatCss() {
-
     return gulp.src(['src/css/global.css', 'src/sass/utils.scss', 'src/sass/components/*.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
