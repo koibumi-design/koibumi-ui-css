@@ -1,0 +1,108 @@
+@import "../colors.scss";
+
+@mixin button-common {
+    padding: 0.625rem 1.25rem;
+    font-size: 1.125rem;
+    border-radius: .75rem;
+    border: 2px solid;
+    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, color 0.25s ease;
+    cursor: pointer;
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+};
+
+button.button-solid-primary, a.button-solid-primary {
+    @include button-common;
+    background-color: $color-primary-500;
+    border-color: $color-primary-500;
+    color: $color-primary-50;
+
+    &:hover {
+        border-color: $color-primary-400;
+        background-color: $color-primary-400;
+    }
+}
+
+button.button-light-primary, a.button-light-primary {
+    @include button-common;
+    background-color: rgba($color-primary-100, 0);
+    border-color: rgba($color-primary-100, 0);
+    color: $color-primary-500;
+
+    &:hover {
+        border-color: $color-primary-100;
+        background-color: $color-primary-100;
+    }
+}
+
+button.button-outline-primary, a.button-outline-primary {
+    @include button-common;
+    background-color: rgba($color-primary-50, 0);
+    border-color: $color-primary-500;
+    color: $color-primary-500;
+
+    &:hover {
+        border-color: $color-primary-400;
+        color: $color-primary-400;
+    }
+}
+
+button.button-flat-primary, a.button-flat-primary {
+    @include button-common;
+    background-color: $color-primary-100;
+    border-color: $color-primary-100;
+    color: $color-primary-500;
+
+    &:hover {
+        color: $color-primary-400;
+        background-color: rgba($color-primary-100, 0.6);
+        border-color: rgba($color-primary-100, 0.6);
+    }
+}
+
+button.button-ghost-primary, a.button-ghost-primary {
+    @include button-common;
+    background-color: rgba($color-primary-500, 0);
+    border-color: $color-primary-500;
+    color: $color-primary-500;
+
+    &:hover {
+        color: $color-primary-50;
+        background-color: $color-primary-500;
+    }
+}
+
+button.button-glow-primary, a.button-glow-primary {
+    @include button-common;
+    background-color: $color-primary-500;
+    border-color: $color-primary-500;
+    color: $color-primary-50;
+    box-shadow: 0 .125rem 1rem rgba($color-primary-500, 0.6) ;
+
+    &:hover {
+        border-color: $color-primary-400;
+        background-color: $color-primary-400;
+    }
+}
+
+button.button-disabled, a.button-disabled {
+    cursor: not-allowed;
+    position: relative;
+    pointer-events: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: 0;
+        bottom: 0;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        background-color: rgba($color-slate-50, 0.5);
+        border-radius: .75rem;
+    }
+}

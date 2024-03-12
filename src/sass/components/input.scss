@@ -1,0 +1,35 @@
+@import "../colors.scss";
+
+label.input-solid-normal {
+    font-size: 0.75rem;
+    padding: 0.75rem 1rem;
+    display: block;
+    border-radius: 0.75rem;
+    background-color: $color-slate-100;
+    transition: background-color 0.25s ease;
+
+    input {
+        margin-top: 0.25rem;
+        box-sizing: border-box;
+        width: 100%;
+        display: block;
+        font-size: 1rem;
+        padding: 0.25rem 0;
+        background: none;
+        border: none;
+    }
+
+    input::placeholder {
+        color: $color-slate-500;
+    }
+
+    &.fix-margin-top {
+        input {
+            margin-top: 0;
+        }
+    }
+
+    &:hover {
+        background-color: lighten($color-slate-100, 3%);
+    }
+}

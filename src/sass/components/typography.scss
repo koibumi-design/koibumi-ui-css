@@ -1,0 +1,25 @@
+@import "../colors.scss";
+
+h1.text-h1 {
+    font-size: 2.5rem;
+
+    &.emphasize {
+        color: $color-primary-600;
+    }
+
+    &.bold {
+        font-weight: bold;
+    }
+}
+
+h2.text-h2 {
+    font-size: 2rem;
+
+    &.emphasize {
+        color: $color-primary-400;
+    }
+
+    &.bold {
+        font-weight: bold;
+    }
+}
