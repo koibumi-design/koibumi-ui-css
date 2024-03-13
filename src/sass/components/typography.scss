@@ -84,7 +84,7 @@ a.text-link {
     &:hover {
         color: $color-primary-500;
         text-decoration: underline;
-        text-underline-offset: 0;
+        text-underline-offset: 1px;
     }
 
     body.dark-mode & {

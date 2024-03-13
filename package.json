@@ -1,6 +1,6 @@
 {
   "name": "@koibumi-design/ui-css",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Koibumi Design System CSS Library",
   "main": "dist/main.min.css",
   "scripts": {
