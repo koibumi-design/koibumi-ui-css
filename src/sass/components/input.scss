@@ -6,7 +6,7 @@ label.input-solid-normal {
     display: block;
     border-radius: 0.75rem;
     background-color: $color-slate-100;
-    transition: background-color 0.25s ease;
+    transition: background-color 0.3s ease;
 
     input {
         margin-top: 0.25rem;
@@ -17,6 +17,19 @@ label.input-solid-normal {
         padding: 0.25rem 0;
         background: none;
         border: none;
+    }
+
+    body.dark-mode & {
+        background-color: $color-slate-700;
+        color: $color-slate-50;
+
+        input::placeholder {
+            color: $color-slate-400;
+        }
+
+        &:hover {
+            background-color: lighten($color-slate-700, 5%);
+        }
     }
 
     input::placeholder {

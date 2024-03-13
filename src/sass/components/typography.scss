@@ -1,25 +1,97 @@
-@import "../colors.scss";
+@import "./color.scss";
+
+h1, h2, h3, h4, h5, h6 {
+    &.emphasize {
+        color: $color-primary-500;
+    }
+}
 
 h1.text-h1 {
     font-size: 2.5rem;
-
-    &.emphasize {
-        color: $color-primary-600;
-    }
-
-    &.bold {
-        font-weight: bold;
-    }
+    font-weight: bold;
 }
 
 h2.text-h2 {
     font-size: 2rem;
+}
 
-    &.emphasize {
-        color: $color-primary-400;
+h3.text-h3 {
+    font-size: 1.6rem;
+}
+
+h4.text-h4 {
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+
+h5.text-h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+h6.text-h6 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+blockquote.text-quote {
+    background-color: rgba($color-slate-50, 0.3);
+    backdrop-filter: blur(18px);
+    padding: 1rem;
+    border-radius: 6px 1rem 1rem 6px;
+    border-left: $color-primary-500 6px solid;
+    box-shadow: 0.125rem 0.125rem 0.5rem rgba($color-slate-700, 0.2);
+
+    body.dark-mode & {
+        background-color: rgba($color-slate-700, 0.3);
+        color: $color-slate-50;
+        box-shadow: 0.125rem 0.125rem 0.5rem rgba($color-slate-400, 0.2);
     }
 
-    &.bold {
-        font-weight: bold;
+}
+
+code.text-code-block {
+    display: block;
+    padding: 1rem 1rem 1rem 2.25rem;
+    border-radius: .5rem;
+    background: $color-slate-800;
+    overflow-x: auto;
+
+    font-family: 'Fira Code', monospace;
+
+    pre {
+        color: white;
+    }
+
+    &::-webkit-scrollbar {
+        height: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $color-primary-500;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $color-slate-900;
+    }
+}
+
+a.text-link {
+    color: $color-primary-600;
+    transition: color 0.25s ease;
+
+    &:hover {
+        color: $color-primary-500;
+        text-decoration: underline;
+        text-underline-offset: 0;
+    }
+
+    body.dark-mode & {
+        color: $color-primary-400;
+
+        &:hover {
+            color: $color-primary-300;
+        }
     }
 }

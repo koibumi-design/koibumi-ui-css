@@ -7,6 +7,25 @@ div.card {
     background-color: $color-slate-30;
     box-shadow: 0.125rem 0.125rem 0.5rem rgba($color-slate-700, 0.2);
 
+    body.dark-mode & {
+        background-color: $color-slate-800;
+        border-color: $color-slate-900;
+        box-shadow: 0.125rem 0.125rem 0.5rem rgba($color-slate-400, 0.2);
+
+        &.glass {
+            background-color: rgba($color-slate-700, 0.3);
+            border-color: $color-slate-700;
+        }
+
+        &.light-glass {
+            background-color: rgba($color-slate-950, 0.1);
+        }
+
+        &.no-shadow {
+            box-shadow: none;
+        }
+    }
+
     > *:not(:last-child) {
         margin-bottom: 0.5rem;
     }

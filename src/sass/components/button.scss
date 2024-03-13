@@ -5,7 +5,7 @@
     font-size: 1.125rem;
     border-radius: .75rem;
     border: 2px solid;
-    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, color 0.25s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
     cursor: pointer;
 
     &:active {
@@ -36,6 +36,13 @@ button.button-light-primary, a.button-light-primary {
         border-color: $color-primary-100;
         background-color: $color-primary-100;
     }
+
+    body.dark-mode & {
+        &:hover {
+            border-color: $color-primary-700;
+            background-color: $color-primary-700;
+        }
+    }
 }
 
 button.button-outline-primary, a.button-outline-primary {
@@ -61,6 +68,17 @@ button.button-flat-primary, a.button-flat-primary {
         background-color: rgba($color-primary-100, 0.6);
         border-color: rgba($color-primary-100, 0.6);
     }
+
+    body.dark-mode & {
+        background-color: $color-primary-700;
+        color: $color-primary-50;
+        border-color: $color-primary-700;
+
+        &:hover {
+            background-color: $color-primary-600;
+            border-color: $color-primary-600;
+        }
+    }
 }
 
 button.button-ghost-primary, a.button-ghost-primary {
@@ -80,7 +98,7 @@ button.button-glow-primary, a.button-glow-primary {
     background-color: $color-primary-500;
     border-color: $color-primary-500;
     color: $color-primary-50;
-    box-shadow: 0 .125rem 1rem rgba($color-primary-500, 0.6) ;
+    box-shadow: 0 .125rem 1rem rgba($color-primary-500, 0.6);
 
     &:hover {
         border-color: $color-primary-400;
@@ -104,5 +122,9 @@ button.button-disabled, a.button-disabled {
         height: calc(100% + 4px);
         background-color: rgba($color-slate-50, 0.5);
         border-radius: .75rem;
+    }
+
+    body.dark-mode &::before {
+        background-color: rgba($color-slate-900, 0.5);
     }
 }
