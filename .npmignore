@@ -1,4 +1,4 @@
 .gitignore
 .github
-glipfile.js
+gulpfile.js
 pnpm-lock.yaml
