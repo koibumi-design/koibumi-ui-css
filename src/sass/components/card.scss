@@ -1,6 +1,12 @@
 @import "../colors.scss";
 
-div.card {
+.card {
+    display: block;
+
+    &.flex {
+        display: flex;
+    }
+
     padding: 1rem;
     border-radius: 1rem;
     border: $color-slate-400 1px solid;
