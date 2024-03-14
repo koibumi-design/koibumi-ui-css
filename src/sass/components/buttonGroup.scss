@@ -1,0 +1,45 @@
+@import "button.scss";
+
+@mixin flex-group {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.button-group.group-row {
+    @include flex-group;
+
+    & > button {
+        height: 100%;
+    }
+
+    & > button:first-child {
+        border-radius: 0.75rem 0 0 0.75rem !important;
+    }
+    & > button:last-child {
+        border-radius: 0 0.75rem 0.75rem 0 !important;
+    }
+    & > button:not(:first-child):not(:last-child) {
+        border-radius: 0 !important;
+    }
+}
+
+.button-group.group-column {
+    @include flex-group;
+    flex-direction: column;
+
+    & > button {
+        width: 100%;
+    }
+
+    & > button:first-child {
+        border-radius: 0.75rem 0.75rem 0 0 !important;
+    }
+    & > button:last-child {
+        border-radius: 0 0 0.75rem 0.75rem !important;
+    }
+    & > button:not(:first-child):not(:last-child) {
+        border-radius: 0 !important;
+    }
+}
