@@ -14,7 +14,7 @@
 
 };
 
-button.button-solid-primary, a.button-solid-primary {
+button.button-solid-primary, .button-link.button-solid-primary {
     @include button-common;
     background-color: $color-primary-500;
     border-color: $color-primary-500;
@@ -26,7 +26,7 @@ button.button-solid-primary, a.button-solid-primary {
     }
 }
 
-button.button-light-primary, a.button-light-primary {
+button.button-light-primary, .button-link.button-light-primary {
     @include button-common;
     background-color: rgba($color-primary-100, 0);
     border-color: rgba($color-primary-100, 0);
@@ -45,7 +45,7 @@ button.button-light-primary, a.button-light-primary {
     }
 }
 
-button.button-outline-primary, a.button-outline-primary {
+button.button-outline-primary, .button-link.button-outline-primary {
     @include button-common;
     background-color: rgba($color-primary-50, 0);
     border-color: $color-primary-500;
@@ -57,7 +57,7 @@ button.button-outline-primary, a.button-outline-primary {
     }
 }
 
-button.button-flat-primary, a.button-flat-primary {
+button.button-flat-primary, .button-link.button-flat-primary {
     @include button-common;
     background-color: $color-primary-100;
     border-color: $color-primary-100;
@@ -81,7 +81,7 @@ button.button-flat-primary, a.button-flat-primary {
     }
 }
 
-button.button-ghost-primary, a.button-ghost-primary {
+button.button-ghost-primary, .button-link.button-ghost-primary {
     @include button-common;
     background-color: rgba($color-primary-500, 0);
     border-color: $color-primary-500;
@@ -93,7 +93,7 @@ button.button-ghost-primary, a.button-ghost-primary {
     }
 }
 
-button.button-glow-primary, a.button-glow-primary {
+button.button-glow-primary, .button-link.button-glow-primary {
     @include button-common;
     background-color: $color-primary-500;
     border-color: $color-primary-500;
@@ -106,7 +106,7 @@ button.button-glow-primary, a.button-glow-primary {
     }
 }
 
-button.button-disabled, a.button-disabled {
+button.button-disabled, .button-link.button-disabled {
     cursor: not-allowed;
     position: relative;
     pointer-events: none;
