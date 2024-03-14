@@ -6,35 +6,35 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-h1.text-h1 {
+h1 {
     font-size: 2.5rem;
     font-weight: bold;
 }
 
-h2.text-h2 {
+h2 {
     font-size: 2rem;
 }
 
-h3.text-h3 {
+h3 {
     font-size: 1.6rem;
 }
 
-h4.text-h4 {
+h4 {
     font-size: 1.35rem;
     font-weight: bold;
 }
 
-h5.text-h5 {
+h5 {
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-h6.text-h6 {
+h6 {
     font-size: 1rem;
     font-weight: bold;
 }
 
-blockquote.text-quote {
+blockquote {
     background-color: rgba($color-slate-50, 0.3);
     backdrop-filter: blur(18px);
     padding: 1rem;
@@ -50,16 +50,30 @@ blockquote.text-quote {
 
 }
 
-code.text-code-block {
+code {
+    background-color: rgba($color-slate-100, 0.3);
+    padding: 1px 6px;
+    border-radius: 4px;
+    margin: 0 5px;
+    border: solid 1px $color-slate-400;
+}
+
+pre:has( > code) {
     display: block;
     padding: 1rem 1rem 1rem 2.25rem;
     border-radius: .5rem;
     background: $color-slate-800;
     overflow-x: auto;
+    color: white;
 
     font-family: 'Fira Code', monospace;
 
-    pre {
+    & > code {
+        background: none;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        margin: 0;
         color: white;
     }
 
@@ -77,14 +91,14 @@ code.text-code-block {
     }
 }
 
-a.text-link {
+a:not(.button-link) {
     color: $color-primary-600;
     transition: color 0.25s ease;
 
     &:hover {
         color: $color-primary-500;
         text-decoration: underline;
-        text-underline-offset: 1px;
+        text-underline-offset: 2px;
     }
 
     body.dark-mode & {
